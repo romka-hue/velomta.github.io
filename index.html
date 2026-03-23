@@ -4,35 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bike Rental Tbilisi & Ananuri | Mountain Bikes & Enduro Trails | VeloMta</title>
- <meta name="description" content="Rent mountain bikes in Tbilisi & Ananuri with VeloMta. Explore enduro trails, join tours, and ride like a pro. ველოსიპედის გაქირავება თბილისში — დაჯავშნე ახლავე!" />
-  <meta name="keywords" content="
-ველოსიპედის გაქირავება თბილისი,
-მთის ველოსიპედი საქართველო,
-ველოსიპედის ტურები ანანური,
-ენდურო ტრასა თბილისი,
-bike rental Tbilisi,
-mountain bike rental Georgia,
-enduro trails Tbilisi,
-bike tours Ananuri,
-cycling tours Georgia,
-VeloMta bike rental,
-ველომთა ველოსიპედი
-" />
+  <meta name="description" content="Rent mountain bikes in Tbilisi & Ananuri with VeloMta. Explore enduro trails, join tours, and ride like a pro. ველოსიპედის გაქირავება თბილისში — დაჯავშნე ახლავე!" />
+  <meta name="keywords" content="ველოსიპედის გაქირავება თბილისი, მთის ველოსიპედი საქართველო, ველოსიპედის ტურები ანანური, ენდურო ტრასა თბილისი, bike rental Tbilisi, mountain bike rental Georgia, enduro trails Tbilisi, bike tours Ananuri, cycling tours Georgia, VeloMta bike rental, ველომთა ველოსიპედი" />
   <meta name="author" content="VeloMta" />
   <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#39ff14" />
+  <meta name="geo.region" content="GE-TB" />
+  <meta name="geo.placename" content="Tbilisi, Georgia" />
   <link rel="canonical" href="https://velomta.com/" />
+  <link rel="icon" type="image/svg+xml" href="logo.svg" />
   <!-- Open Graph -->
   <meta property="og:title" content="მთის ველოსიპედი - VeloMta" />
   <meta property="og:description" content="საუკეთესო მთის ველოსიპედები, ტრასები და ტურნირები — ყველაფერი ერთ ადგილას." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://velomta.com/" />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1544191696-102dbdaeeaa0?w=1200" />
+  <meta property="og:image" content="https://velomta.com/logo.svg" />
   <meta property="og:locale" content="ka_GE" />
+  <meta property="og:site_name" content="VeloMta" />
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="მთის ველოსიპედი - VeloMta" />
   <meta name="twitter:description" content="საუკეთესო მთის ველოსიპედები, ტრასები და ტურნირები — ყველაფერი ერთ ადგილას." />
-  <meta name="twitter:image" content="https://images.unsplash.com/photo-1544191696-102dbdaeeaa0?w=1200" />
+  <meta name="twitter:image" content="https://velomta.com/logo.svg" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;700;900&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -66,12 +59,10 @@ VeloMta bike rental,
       border-bottom: 1px solid #222;
     }
 
-    .logo {
-      font-size: 1.6rem; font-weight: 900;
-      color: var(--accent);
-      letter-spacing: 2px;
-      text-decoration: none;
-    }
+    .logo { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; }
+    .logo img { height: 40px; width: auto; display: block; object-fit: contain; mix-blend-mode: screen; }
+    .logo span { font-size: 1.3rem; font-weight: 900; color: var(--text); letter-spacing: 1px; }
+    .logo span em { color: var(--accent); font-style: normal; }
 
     .nav-links { display: flex; gap: 2rem; list-style: none; }
     .nav-links a {
@@ -179,6 +170,10 @@ VeloMta bike rental,
       overflow: hidden;
       border: 1px solid #222;
       transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      display: block;
     }
 
     .bike-card:hover {
@@ -239,11 +234,6 @@ VeloMta bike rental,
 
     .exp-overlay h3 { font-size: 1.3rem; font-weight: 900; }
     .exp-overlay p { font-size: 0.85rem; color: #bbb; margin-top: 0.4rem; }
-
-    .exp-icon {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
 
     /* TOURNAMENTS */
     #tournaments {
@@ -383,7 +373,7 @@ VeloMta bike rental,
 
 <!-- NAV -->
 <nav>
-  <a href="#hero" class="logo">🚵 VeloMta</a>
+  <a href="#hero" class="logo"><img src="logo.svg" alt="VeloMta" /><span>Velo<em>Mta</em></span></a>
   <ul class="nav-links" id="navLinks">
     <li><a href="#bikes">ველოსიპედები</a></li>
     <li><a href="#experience">გამოცდილება</a></li>
@@ -408,38 +398,38 @@ VeloMta bike rental,
   <h2 class="section-title">ჩვენი <span>ველოსიპედები</span></h2>
   <p class="section-sub">აირჩიე შენი სტილი — სიჩქარე, სიმძლავრე ან კომფორტი</p>
   <div class="bikes-grid">
-    <div class="bike-card">
+    <a href="#contact" class="bike-card">
       <img src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=600" alt="Enduro Pro" />
       <div class="bike-info">
         <h3>Enduro Pro X9</h3>
         <p>სრული სასუსპენზიო სისტემა, ექსტრემალური ტრასებისთვის.</p>
         <div class="bike-price">₾15 / საათი</div>
       </div>
-    </div>
-    <div class="bike-card">
+    </a>
+    <a href="#contact" class="bike-card">
       <img src="https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=600" alt="Trail Blazer" />
       <div class="bike-info">
         <h3>Trail Blazer 27</h3>
         <p>მსუბუქი ჩარჩო, სწრაფი და მანევრირებადი ტყის ბილიკებზე.</p>
         <div class="bike-price">₾12 / საათი</div>
       </div>
-    </div>
-    <div class="bike-card">
+    </a>
+    <a href="#contact" class="bike-card">
       <img src="https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?w=600" alt="Race King" />
       <div class="bike-info">
         <h3>Race King Carbon</h3>
         <p>კარბონის ჩარჩო, შეჯიბრებებისთვის შექმნილი სიჩქარე.</p>
         <div class="bike-price">₾20 / საათი</div>
       </div>
-    </div>
-    <div class="bike-card">
+    </a>
+    <a href="#contact" class="bike-card">
       <img src="https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?w=600" alt="Family Rider" />
       <div class="bike-info">
         <h3>Family Rider 24</h3>
         <p>კომფორტული და უსაფრთხო — ოჯახური გასეირნებებისთვის.</p>
         <div class="bike-price">₾8 / საათი</div>
       </div>
-    </div>
+    </a>
   </div>
 </section>
 
@@ -451,7 +441,6 @@ VeloMta bike rental,
     <div class="exp-card">
       <img src="https://images.unsplash.com/photo-1544191696-102dbdaeeaa0?w=800" alt="Mountain Trails" />
       <div class="exp-overlay">
-        <div class="exp-icon">⛰️</div>
         <h3>მთის ტრასები</h3>
         <p>10+ მარკირებული ბილიკი სხვადასხვა სირთულის დონით.</p>
       </div>
@@ -459,7 +448,6 @@ VeloMta bike rental,
     <div class="exp-card">
       <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800" alt="Racing Events" />
       <div class="exp-overlay">
-        <div class="exp-icon">🏁</div>
         <h3>სარბოლო ღონისძიებები</h3>
         <p>ყოველთვიური ტურნირები და სიჩქარის გამოწვევები.</p>
       </div>
@@ -467,7 +455,6 @@ VeloMta bike rental,
     <div class="exp-card">
       <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=800" alt="Family Adventures" />
       <div class="exp-overlay">
-        <div class="exp-icon">👨‍👩‍👧</div>
         <h3>ოჯახური თავგადასავალი</h3>
         <p>უსაფრთხო მარშრუტები ბავშვებისა და მშობლებისთვის.</p>
       </div>
@@ -532,7 +519,7 @@ VeloMta bike rental,
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2026 <span>VeloMta</span> — ყველა უფლება დაცულია · თბილისი & ანანური, საქართველო 🇬🇪</p>
+  <p>© 2026 <span>VeloMta</span> — ყველა უფლება დაცულია · თბილისი & ანანური, საქართველო</p>
 </footer>
 
 <script>
